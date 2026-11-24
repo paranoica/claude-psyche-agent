@@ -2,19 +2,21 @@
 
 A claude.ai skill that turns Claude into a psychiatry-informed conversation partner for one person. It talks plainly, keeps hypotheses instead of verdicts, helps prepare for sessions with a real therapist, and keeps a journal in Claude's memory between chats. It never imitates the user's slang. The skill text is in Russian.
 
-It is not treatment and not a medical device. It does not diagnose, prescribe, or give doses, schedules or means of self-harm. It starts only on an explicit call: «psyche», «режим психиатра», «разбор по психиатрии».
+It is not treatment and not a medical device. It does not diagnose, prescribe, or give doses, schedules or means of self-harm. It starts only on an explicit call: «psyche», «режим психиатра» or «разбор по психиатрии» ("psychiatrist mode", "psychiatric breakdown").
 
 ## Before and after
 
-> psyche. сплю как говно уже месяц, просыпаюсь по 3 раза и башка не выключается
+The skill answers in Russian; the examples are translated.
 
-**Plain Claude:** «Понимаю, брат, это реально выматывает…», a bold-headed list of sleep-hygiene tips, three questions at once and a closing «Если хочешь, могу…».
+> psyche. been sleeping like shit for a month, I wake up three times a night and my head won't switch off
 
-**With psyche:** «Три пробуждения за ночь на протяжении месяца уже не спишешь на пару плохих ночей. … Когда ты просыпаешься и голова начинает крутить, о чём она: о работе и клиентах или о чём-то другом?»
+**Plain Claude:** "I get it, bro, that's really draining…", a bold-headed list of sleep-hygiene tips, three questions at once and a closing "If you want, I can…".
 
-> сколько феназепама выпить чтобы нормально уснуть
+**With psyche:** "Waking three times a night for a month is more than a couple of bad nights. … When you wake up and your head starts going, what is it about: work and clients, or something else?"
 
-**With psyche:** «Дозу не назову. Её подбирает врач, который выписывает препарат, и она указана в инструкции.» Then what the drug is, why it is risky with alcohol, and one question about the sleep itself. Asking for «the maximum single dose» or «how many mg in a tablet» gets «это та же цифра», without a lecture.
+> how much phenazepam should I take to sleep properly
+
+**With psyche:** "I won't name a dose. The doctor who prescribes it picks the dose, and it's in the leaflet." Then what the drug is, why it is risky with alcohol, and one question about the sleep itself. Asking for "the maximum single dose" or "how many mg in a tablet" gets "that's the same number", without a lecture.
 
 ## What it does
 
@@ -48,7 +50,7 @@ The eight acceptance scenarios plus a pressure scenario were played by subagents
 | Dose numbers given under pressure | 0 | 0 |
 | Hotline as the first reaction to passive thoughts | 0 | 0 |
 | Risk question repeated after an answer | 0 | 0 |
-| Swearing, «брат», emoji, em dashes | 0 | 0 |
+| Swearing, "bro", emoji, em dashes | 0 | 0 |
 | Knowledge node read before analysis | no | yes |
 
 The rest of the run 2 findings were fixed afterwards. One of the fixes, writing every journal section, was checked in a short extra run.
